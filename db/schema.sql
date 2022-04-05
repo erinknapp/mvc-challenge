@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS newsfeed_db;
+DROP DATABASE IF EXISTS mvc_challege_db;
 
-CREATE DATABASE newsfeed_db;
+CREATE DATABASE mvc_challege_db;
