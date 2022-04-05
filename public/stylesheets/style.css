@@ -12,13 +12,20 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #D9EAD3;
   font-weight: bold;
   transition: color .1s;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 a:hover {
-  color: #3486eb;
+  color: black;
 }
 
 button {
@@ -33,7 +40,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: #c7f5bb;
 }
 
 .post-list {
@@ -41,10 +48,20 @@ button:hover {
   padding: 0;
 }
 
-textarea, input {
+.post-body textarea, input {
   padding: .5%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  min-width: 60%;
+  min-height: 400px;
+}
+
+.post-title textarea, input{
+  padding: .5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-height: 50px;
+  min-width: 60%;
 }
 
 textarea:focus, input:focus {
@@ -52,10 +69,10 @@ textarea:focus, input:focus {
   border: 1px solid #3486eb;
 }
 
-textarea {
-  min-width: 40%;
-  min-height: 100px;
-}
+/* post-body textarea {
+  min-width: 60%;
+  min-height: 400px;
+} */
 
 form > div {
   margin-bottom: 2%;
@@ -76,19 +93,33 @@ form label {
 
 header {
   border-bottom: 1px solid #ccc;
+  background-color: rgb(71, 65, 65);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 header h1 {
-  font-size: 1em;
+  text-shadow: #231010;
+}
+
+header a {
+  color: #D9EAD3;
+  text-decoration: none;
 }
 
 main {
   flex: 1;
   padding: 2% 4%;
+}
+
+.btn {
+  background-color: #D9EAD3;
+  color: #231010;
+  border:rgb(71, 65, 65) solid 2px;
 }
 
 .btn-no-style {
@@ -97,7 +128,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #D9EAD3;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -106,7 +137,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: #D9EAD3;
 }
 
 .delete-post-btn {
@@ -120,6 +151,19 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
+  background-color: white;
+  border-style: outset 5px #7d7d7d;
+}
+
+.post .title {
+  background-color: #7d7d7d;
+  padding: 10px;
+  margin: 5px;
+}
+
+.title a {
+  padding: 10px;
+  margin: 5px;
 }
 
 .post .title span {
@@ -131,15 +175,6 @@ main {
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
 }
 
 .comment-form {
@@ -159,6 +194,16 @@ main {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
+
+}
+
+.meta {
+  background-color: #D9EAD3
+}
+.meta a{
+  color: black;
+  padding: 10px;
+  margin: 5px;
 }
 
 .new-post-form input {
@@ -175,4 +220,5 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+  background-color: #D9EAD3;
 }
